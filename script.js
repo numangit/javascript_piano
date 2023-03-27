@@ -8,6 +8,14 @@ let audio = new Audio("/tunes/a.wav");
 const playTune = (key) => {
     audio.src = `tunes/${key}.wav`;
     audio.play();
+
+    //adding class the active key
+    const clickedKey = document.querySelector(`[data-key="${key}"]`);
+    clickedKey.classList.add("active");
+    //timeout to remove active class
+    setTimeout(() => {
+        clickedKey.classList.remove("active");
+    }, 100)
 }
 
 //event to get the key pressed by mouse
