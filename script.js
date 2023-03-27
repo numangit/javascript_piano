@@ -10,6 +10,15 @@ const playTune = (key) => {
     audio.play();
 }
 
+//event to get the key pressed by mouse
 pianoKeysEl.forEach(key => {
-    key.addEventListener("click", () => playTune(key.dataset.key))
+    key.addEventListener("click", () => playTune(key.dataset.key));
 })
+
+//function to handle key press
+const pressedKey = (e) => {
+    playTune(e.key);
+}
+
+//event to get the key pressed by keyboard
+document.addEventListener("keydown", pressedKey);
