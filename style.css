@@ -19,3 +19,8 @@ body {
     padding: 35px 40px;
     background-color: black;
 }
+
+.piano-keys .key {
+    list-style: none;
+    color: #a2a2a2;
+}
