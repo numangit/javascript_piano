@@ -82,9 +82,11 @@ header .column span {
 
 .piano-keys .key {
     list-style: none;
+    user-select: none;
     color: #a2a2a2;
     cursor: pointer;
     text-transform: uppercase;
+    position: relative;
 }
 
 .piano-keys .white {
@@ -102,4 +104,12 @@ header .column span {
     background: linear-gradient(#333, #000);
     margin: 0 -22px 0 -22px;
     border-radius: 0 0 5px 5px;
+}
+
+.piano-keys span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 1.12rem;
+    text-align: center;
 }
