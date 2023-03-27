@@ -36,6 +36,25 @@ header .column {
     align-items: center;
 }
 
+header .column span {
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 1.19rem;
+}
+
+.volume-slider input {
+    accent-color: #fff;
+}
+
+.key-checkbox input {
+    appearance: none;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #4b4b4b;
+}
+
 .piano-keys .key {
     list-style: none;
     color: #a2a2a2;
