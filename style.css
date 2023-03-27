@@ -47,7 +47,7 @@ header .column span {
     outline: none;
 }
 
-.key-checkbox input {
+.keys-checkbox input {
     appearance: none;
     width: 60px;
     height: 30px;
@@ -57,7 +57,7 @@ header .column span {
     background-color: #4b4b4b;
 }
 
-.key-checkbox input::before {
+.keys-checkbox input::before {
     content: "";
     position: absolute;
     width: 20px;
@@ -70,7 +70,7 @@ header .column span {
     transition: all 0.3s ease;
 }
 
-.key-checkbox input:checked::before {
+.keys-checkbox input:checked::before {
     left: 35px;
     background-color: #fff;
 }
