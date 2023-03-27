@@ -10,14 +10,14 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: aliceblue;
+    background-color: #0c1222;
 }
 
 .wrapper {
     width: 780px;
     border-radius: 20px;
     padding: 35px 40px;
-    background-color: black;
+    background-color: #075985;
 }
 
 .wrapper header {
