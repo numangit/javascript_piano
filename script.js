@@ -1,6 +1,7 @@
 //select element
 const pianoKeysEl = document.querySelectorAll(".piano-keys .key");
 const volumeSliderEl = document.querySelector(".volume-slider input");
+const keyTogglerEl = document.querySelector(".keys-checkbox input");
 
 //audio file location
 let audio = new Audio("/tunes/a.wav");
@@ -35,10 +36,19 @@ const handleVolume = (e) => {
     audio.volume = e.target.value;
 };
 
+//function to handle toggle
+const handleToggle = (e) => {
+    //to toggle hide class in each key
+    pianoKeysEl.forEach(key => key.classList.toggle("hide"));
+};
+
 //function to handle key press
 const pressedKey = (e) => {
     allKeys.includes(e.key) && playTune(e.key);
 };
+
+//event to handle volume slider
+keyTogglerEl.addEventListener("click", handleToggle);
 
 //event to handle volume slider
 volumeSliderEl.addEventListener("input", handleVolume);
