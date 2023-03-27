@@ -12,3 +12,10 @@ body {
     min-height: 100vh;
     background-color: aliceblue;
 }
+
+.wrapper {
+    width: 780px;
+    border-radius: 20px;
+    padding: 35px 40px;
+    background-color: black;
+}
