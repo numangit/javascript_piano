@@ -1,5 +1,6 @@
 //select element
 const pianoKeysEl = document.querySelectorAll(".piano-keys .key");
+const volumeSliderEl = document.querySelector(".volume-slider input");
 
 //audio file location
 let audio = new Audio("/tunes/a.wav");
@@ -18,7 +19,7 @@ const playTune = (key) => {
     setTimeout(() => {
         clickedKey.classList.remove("active");
     }, 100)
-}
+};
 
 //event to get the key pressed by mouse
 pianoKeysEl.forEach(key => {
@@ -27,12 +28,20 @@ pianoKeysEl.forEach(key => {
 
     //calling playtune function when keys clicked
     key.addEventListener("click", () => playTune(key.dataset.key));
-})
+});
+
+//function to handle volume
+const handleVolume = (e) => {
+    audio.volume = e.target.value;
+};
 
 //function to handle key press
 const pressedKey = (e) => {
     allKeys.includes(e.key) && playTune(e.key);
-}
+};
 
-//event to get the key pressed by keyboard
+//event to handle volume slider
+volumeSliderEl.addEventListener("input", handleVolume);
+
+//event to handle key press by keyboard
 document.addEventListener("keydown", pressedKey);
