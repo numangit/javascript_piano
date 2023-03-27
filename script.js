@@ -4,6 +4,8 @@ const pianoKeysEl = document.querySelectorAll(".piano-keys .key");
 //audio file location
 let audio = new Audio("/tunes/a.wav");
 
+let allKeys = [];
+
 //function to play tune
 const playTune = (key) => {
     audio.src = `tunes/${key}.wav`;
@@ -20,12 +22,16 @@ const playTune = (key) => {
 
 //event to get the key pressed by mouse
 pianoKeysEl.forEach(key => {
+    //adding data key value to all keys array to avoid error
+    allKeys.push(key.dataset.key)
+
+    //calling playtune function when keys clicked
     key.addEventListener("click", () => playTune(key.dataset.key));
 })
 
 //function to handle key press
 const pressedKey = (e) => {
-    playTune(e.key);
+    allKeys.includes(e.key) && playTune(e.key);
 }
 
 //event to get the key pressed by keyboard
